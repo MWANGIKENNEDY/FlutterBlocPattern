@@ -27,8 +27,11 @@ class _HomePage extends State<HomePage>{
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            //StreamBuilder listens to a stream of events,the rebuilds widget
             StreamBuilder(
+              //output
               stream: _streamController.stream,
+              //initial data to display when there is no input data
               initialData: 10,
               builder: (BuildContext context,AsyncSnapshot<int> snapShot){
                 return Text("Value: $_number");
@@ -56,5 +59,4 @@ class _HomePage extends State<HomePage>{
       ),
     );
   }
-
 }
